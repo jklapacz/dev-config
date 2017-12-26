@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/jklapacz/github/dev-configs/vim'
+let g:netrw_dirhist_2='/Users/jklapacz/VirtualBox VMs'
+let g:netrw_dirhist_3='/Users/jklapacz/github/dev-configs/vim'
+let g:netrw_dirhist_4='/Users/jklapacz/projects/Toque-Blanche'
