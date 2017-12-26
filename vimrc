@@ -36,9 +36,6 @@ syntax on
 set mouse=a
 
 " ------- Plugin Specific Settings -------
-" We need this for plugins like Syntastic and vim-gitgutter which put symbols
-" in the sign column.
-hi clear SignColumn
 
 " ---- altercation/vim-colors-solarized settings ----
 set background=dark
@@ -49,6 +46,9 @@ set background=dark
 " Set colorscheme
 colorscheme solarized 
 
+" We need this for plugins like Syntastic and vim-gitgutter which put symbols
+" in the sign column.
+hi clear SignColumn
 
 " ---- bling/vim-airline settings ----
 " Always show statusbar
