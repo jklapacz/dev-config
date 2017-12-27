@@ -33,6 +33,10 @@ Plugin 'Raimondi/delimitMate'
 " ----- tmux -----------------------------------
 Plugin 'christoomey/vim-tmux-navigator'
 
+" ----- Syntax plugins ------------------------------------------------
+Plugin 'jez/vim-c0'
+Plugin 'jez/vim-ispc'
+Plugin 'kchmck/vim-coffee-script'"
   
 call vundle#end()
 
