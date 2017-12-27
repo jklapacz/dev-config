@@ -21,6 +21,14 @@ Plugin 'vim-syntastic/syntastic' " syntax highlighting and error catching
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
+Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finding
+
+" ----- Working with Git ----------------------------------------------
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+
+" ----- Other text editing features -----------------------------------
+Plugin 'Raimondi/delimitMate'
   
 call vundle#end()
 
@@ -106,6 +114,17 @@ nmap <silent> <leader>b :TagbarToggle<CR>
 " Uncomment to open tagbar automatically whenever possible
 "autocmd BufEnter * nested :call tagbar#autoopen(0)
 
+" ----- airblade/vim-gitgutter settings -----
+" In vim-airline, only display 'hunks' if the diff is non-zero
+let g:airline#extensions#hunks#non_zero_only = 1
 
-
+" ----- Raimondi/delimitMate settings -----
+let delimitMate_expand_cr = 1
+  augroup mydelimitMate
+  au!
+  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
+  au FileType tex let b:delimitMate_quotes = ""
+  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
+  au FileType python let b:delimitMate_nesting_quotes = ['"', 
+augroup END
 
