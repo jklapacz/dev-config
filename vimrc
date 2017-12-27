@@ -49,7 +49,18 @@ set number
 set showcmd
 set incsearch
 set hlsearch
+set splitright         " Vertical splits use right half of screen
 
+if exists('&breakindent')
+  set breakindent      " Indent wrapped lines up to the same 
+endif
+
+
+" Tab settings
+set expandtab          " Expand tabs into spaces
+set tabstop=2          " default to 2 spaces for a hard tab
+set softtabstop=2      " default to 2 spaces for the soft tab
+set shiftwidth=2       " for when <TAB> is pressed at the beginning of a line
 syntax on
 
 set mouse=a
@@ -136,3 +147,9 @@ let delimitMate_expand_cr = 1
   au FileType python let b:delimitMate_nesting_quotes = ['"', 
 augroup END
 
+" ---- Commands ----
+" Clear highlighted search with :C
+command! C nohlsearch
+
+" Force write readonly files using sudo
+command! WS w !sudo tee %
