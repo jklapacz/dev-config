@@ -2,3 +2,6 @@ dependencies/
 vim/bundle/
 tags
 *.swp
+*.tar.gz
+libevent-2.0.22-stable/
+tmux-2.3/

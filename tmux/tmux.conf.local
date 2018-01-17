@@ -261,7 +261,7 @@ set -g mode-keys vi
 #set -g status-position top
 
 # Use reattach-to-user-namespace wrapper program
-set-option -g default-command "reattach-to-user-namespace -l zsh"
+#set-option -g default-command "reattach-to-user-namespace -l zsh"
 
 # Prevent window renaming
 set-option -g allow-rename off

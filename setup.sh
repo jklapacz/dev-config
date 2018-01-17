@@ -25,6 +25,7 @@ cd $DEPS
 
 git clone https://github.com/VundleVim/Vundle.vim $VIM_DIR/bundle/Vundle.vim
 
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
 rm $VIM_DIR/vim
