@@ -1,7 +1,11 @@
 " This is set first because it changes many options
 set nocompatible
-
+runtime macros/matchit.vim
 filetype off
+
+if has("autocmd")
+  filetype indent plugin on
+end
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -37,6 +41,25 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'"
+
+" ---- Ruby ----
+Plugin 'ruby-matchit'
+Plugin 'kana/vim-textobj-user'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+
+
+" ---- Rails ----
+Plugin 'tpope/vim-rails'
+
+
+" ---- Code ----
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+
   
 call vundle#end()
 
