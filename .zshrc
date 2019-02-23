@@ -13,7 +13,7 @@ autoload -Uz compinit && compinit
 
 
 # Define the environment variable ZPLUG_HOME 
-export ZPLUG_HOME=~/homebrew/opt/zplug
+#export ZPLUG_HOME=~/homebrew/opt/zplug
 
 # Loads zplug
 source $ZPLUG_HOME/init.zsh
@@ -118,16 +118,16 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Open ssl, this might not be necessary...
-export PATH="/Users/jklapacz/homebrew/opt/openssl/bin:$PATH"
-export LDFLAGS="-L/Users/jklapacz/homebrew/opt/openssl/lib"
-export CPPFLAGS="-I/Users/jklapacz/homebrew/opt/openssl/include"
-export PKG_CONFIG_PATH="/Users/jklapacz/homebrew/opt/openssl/lib/pkgconfig"
-export HUB=docker-jklapacz-misc-dev.artifactory00.cc.pdrop.net
-source ~/projects/random/bin/utils
+#export PATH="/Users/jklapacz/homebrew/opt/openssl/bin:$PATH"
+#export LDFLAGS="-L/Users/jklapacz/homebrew/opt/openssl/lib"
+#export CPPFLAGS="-I/Users/jklapacz/homebrew/opt/openssl/include"
+#export PKG_CONFIG_PATH="/Users/jklapacz/homebrew/opt/openssl/lib/pkgconfig"
+#export HUB=docker-jklapacz-misc-dev.artifactory00.cc.pdrop.net
+#source ~/projects/random/bin/utils
 
-export PATH=$PATH:$HOME/bin
+export PATH=$HOME/bin:$PATH
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-export DOCKER_REPO=docker-jklapacz-misc-dev.artifactory00.cc.pdrop.net
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+#
+#export DOCKER_REPO=docker-jklapacz-misc-dev.artifactory00.cc.pdrop.net
