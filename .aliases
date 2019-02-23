@@ -1,0 +1,53 @@
+# Useful aliases
+alias toqui=/Users/jklapacz/projects/Toque-Blanche
+alias toqapi=/Users/jklapacz/projects/toque-api
+alias toqcli=/Users/jklapacz/projects/toque-client-python
+alias gst="git status"
+alias edit-zshrc="vim ~/.zshrc"
+alias edit-vimrc="vim ~/.vimrc"
+alias reload-zshrc="source ~/.zshrc"
+alias bfg="java -jar ~/bfg.jar"
+alias vbm="VBoxManage"
+
+
+# SSH Aliases
+# Use these as the target to ssh
+alias ssh-pristine="ssh -A -p 4022 localhost -o TCPKeepAlive=yes -o ServerAliveInterval=15"
+alias ssh-anotha="ssh -A -p 7022 localhost"
+alias workbench="ssh -A -p 10022 localhost"
+alias ssh-master="ssh -A -p 8022 localhost"
+alias ssh-slave="ssh -A -p 9022 localhost" 
+
+alias ssh-rhel="ssh -A fdsui-rhel-server"
+
+alias sshfs-pristine="sshfs jklapacz@localhost:/home/jklapacz ~/mount_points/4022 -o follow_symlinks -C -p 4022"
+alias sshfs-anotha="sshfs jklapacz@localhost:/home/jklapacz ~/mount_points/7022 -o follow_symlinks -C -p 7022"
+alias sshfs-workbench="sshfs jklapacz@localhost:/home/jklapacz ~/mount_points/workbench1 -o follow_symlinks -C -p 10022"
+alias sshfs-master="sshfs jklapacz@localhost:/home/jklapacz ~/mount_points/8022 -o follow_symlinks -C -p 8022"
+alias sshfs-slave="sshfs jklapacz@localhost:/home/jklapacz ~/mount_points/9022 -o follow_symlinks -C -p 9022"
+
+alias sshfs-rhel="sshfs jklapacz@fdsui-rhel-server.ad.pdrop.net:/home/jklapacz ~/mount_points/go-server -o follow_symlinks -C"
+
+
+# Quick directory shortcuts
+alias home-pristine="cd ~/mount_points/4022"
+alias home-anotha="cd ~/mount_points/7022"
+alias home-master="cd ~/mount_points/8022"
+alias home-slave="cd ~/mount_points/9022"
+alias home-rhel="cd ~/mount_points/go-server"
+alias home-workbench="cd ~/mount_points/workbench1"
+
+# Quick unmounts
+alias umount-pristine="umount -f ~/mount_points/4022"
+alias umount-anotha="umount -f ~/mount_points/7022"
+alias umount-master="umount -f ~/mount_points/8022"
+alias umount-slave="umount -f ~/mount_points/9022"
+alias umount-workbench="umount -f ~/mount_points/workbench1"
+
+# Docker
+alias dc="docker-compose"
+
+# Helpers
+alias ll="ls -lah"
+alias timeout="gtimeout"
+alias dm="docker-machine"
