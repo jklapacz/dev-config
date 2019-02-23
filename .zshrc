@@ -1,6 +1,30 @@
 if [ -d "$HOME/homebrew/bin" ]; then
     PATH="$HOME/homebrew/bin:$PATH"
 fi
+#Initialize for powerline shell in ubuntu:
+#
+
+function powerline_precmd() {
+    PS1="$(powerline-shell --shell zsh $?)"
+}
+
+function install_powerline_precmd() {
+  for s in "${precmd_functions[@]}"; do
+    if [ "$s" = "powerline_precmd" ]; then
+      return
+    fi
+  done
+  precmd_functions+=(powerline_precmd)
+}
+
+if [ "$TERM" != "linux" ]; then
+    install_powerline_precmd
+fi
+
+# end
+#if [ -d "$HOME/homebrew/bin" ]; then
+#    PATH="$HOME/homebrew/bin:$PATH"
+#fi
 ##########################################################
 # Pre configuration
 #
@@ -13,6 +37,7 @@ autoload -Uz compinit && compinit
 
 
 # Define the environment variable ZPLUG_HOME 
+export ZPLUG_HOME=~/.zplug
 export ZPLUG_HOME=~/homebrew/opt/zplug
 
 # Loads zplug
@@ -118,10 +143,6 @@ export NVM_DIR="$HOME/.nvm"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Open ssl, this might not be necessary...
-export PATH="/Users/jklapacz/homebrew/opt/openssl/bin:$PATH"
-export LDFLAGS="-L/Users/jklapacz/homebrew/opt/openssl/lib"
-export CPPFLAGS="-I/Users/jklapacz/homebrew/opt/openssl/include"
-export PKG_CONFIG_PATH="/Users/jklapacz/homebrew/opt/openssl/lib/pkgconfig"
 export HUB=docker-jklapacz-misc-dev.artifactory00.cc.pdrop.net
 source ~/projects/random/bin/utils
 
@@ -131,3 +152,6 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 export DOCKER_REPO=docker-jklapacz-misc-dev.artifactory00.cc.pdrop.net
+
+export PATH=$HOME/bin:$PATH
+
