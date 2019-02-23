@@ -16,8 +16,14 @@ pushd $HOME
     ln -s $VIMRC .vimrc
     ln -s $VIM_DIR .vim
     
-    ln -s $TMUX_CONF .tmux.conf
-    ln -s $TMUX_CONF_LOCAL .tmux.conf.local
+    #ln -s $TMUX_CONF .tmux.conf
+    #ln -s $TMUX_CONF_LOCAL .tmux.conf.local
 popd
 
+# Add config if not present
+if ! grep -Fxq "$(cat .gitconfig)" ~/.gitconfig; then
+    cat .gitconfig >> ~/.gitconfig
+fi
+
 ./restore_backups.sh $VIM_DIR
+./setup_zsh.sh
