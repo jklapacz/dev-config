@@ -1,6 +1,5 @@
 " This is set first because it changes many options
 set nocompatible
-
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -9,6 +8,7 @@ call vundle#begin()
 Plugin 'VindleVim/Vundle.vim'
 
 " ------- Aesthetics ------- "
+Plugin 'romainl/flattened'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline'
@@ -22,6 +22,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy finding
+Plugin 'brookhong/ag.vim'
 
 " ----- Working with Git ----------------------------------------------
 Plugin 'airblade/vim-gitgutter'
@@ -37,11 +38,14 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jez/vim-c0'
 Plugin 'jez/vim-ispc'
 Plugin 'kchmck/vim-coffee-script'"
-  
+Plugin 'elixir-editors/vim-elixir'  
+
 call vundle#end()
-
+filetype on
 filetype plugin indent on
+filetype indent on
 
+set ai
 " ---- General Settings ----
 set backspace=indent,eol,start
 set ruler
@@ -74,7 +78,7 @@ set background=dark
 " let g:solarized_termcolors=256
 
 " Set colorscheme
-colorscheme solarized 
+colorscheme slate 
 
 " We need this for plugins like Syntastic and vim-gitgutter which put symbols
 " in the sign column.
@@ -99,7 +103,7 @@ let g:airline_detect_past=1
 let g:airline#extensions#tabline#enabled = 1
 
 " Use solarized theme for Airline status bar
-let g:airline_theme='solarized'
+let g:airline_theme='minimalist'
 
 " ---- jistr/vim-nerdtree-settings ----
 "  open browser tab with \t
@@ -153,3 +157,7 @@ command! C nohlsearch
 
 " Force write readonly files using sudo
 command! WS w !sudo tee %
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+
+
