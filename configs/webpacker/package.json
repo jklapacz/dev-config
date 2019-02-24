@@ -1,0 +1,59 @@
+{
+  "name": "{{scope}}/{{name}}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "author": "{{author}}}",
+  "license": "{{license}}",
+  "repository": "{{repo}}",
+  "scripts": {
+    "check": "yarn prettier:check && yarn tslint:check",
+    "fix": "yarn prettier:fix && yarn tslint:fix",
+    "clean": "rm -rf build/",
+    "compile": "tsc -p . ",
+    "prettier:check": "prettier 'app/javascript/**/*.{ts, tsx}' --check",
+    "prettier:fix": "yarn prettier:check --write",
+    "tslint:check": "tslint -c tslint.json 'app/javascript/**/*.{ts,tsx}'",
+    "tslint:fix": "yarn tslint:check --fix",
+    "test": "yarn run jest",
+    "prepare": "echo 'test' || yarn compile",
+    "pretest": "yarn compile",
+    "posttest": "yarn run check"
+  },
+  "dependencies": {
+    "@rails/webpacker": "^4.0.0-rc.7",
+    "@types/react": "^16.8.1",
+    "@types/react-dom": "^16.0.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "ts-loader": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.1",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/enzyme": "^3.1.18",
+    "@types/enzyme-adapter-react-16": "^1.0.4",
+    "@types/jest": "^24.0.6",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-react": "^3.6.0",
+    "typescript": "^3.3.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "cacheDirectories": [
+    "node_modules"
+  ]
+}

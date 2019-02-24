@@ -1,0 +1,36 @@
+ {
+   "compilerOptions": {
+     "allowUnreachableCode": false,
+     "allowUnusedLabels": false,
+     "declaration": true,
+     "forceConsistentCasingInFileNames": true,
+     "noEmitOnError": true,
+     "lib": ["dom", "es6"],
+     "noFallthroughCasesInSwitch": true,
+     "noImplicitReturns": true,
+     "pretty": true,
+     "sourceMap": true,
+     "strict": true,
+     "target": "es2016",
+     "jsx": "react",
+     "module": "es6",
+     "moduleResolution": "node",
+     "experimentalDecorators": true,
+     "emitDecoratorMetadata": true,
+     "esModuleInterop": true,
+     "allowJs": false,
+     "allowSyntheticDefaultImports": true,
+     "rootDir": ".",
+     "outDir": "build",
+     "skipLibCheck": true
+   },
+   "include": [
+     "./app/javascript/*.ts",
+     "./app/javascript/*.tsx",
+     "./app/javascript/**/*.ts",
+     "./app/javascript/**/*.tsx"
+   ],
+   "exclude": [
+     "node_modules"
+   ]
+}
